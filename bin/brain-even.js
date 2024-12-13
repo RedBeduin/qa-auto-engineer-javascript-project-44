@@ -39,7 +39,7 @@ for(let i = 0; i < 3; i++)
     }
     else
     {
-      console.log(`${answer} is wrong answer ;(.Correct answer was ${sayNumEvOrNot(num[i])}.\nLet's try again, ${UserName}!`);
+      console.log(`'${answer}' is wrong answer ;(.Correct answer was '${sayNumEvOrNot(num[i])}'.\nLet's try again, ${UserName}!`);
       break; 
     }
   }
