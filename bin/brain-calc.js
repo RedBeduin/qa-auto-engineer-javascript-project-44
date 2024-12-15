@@ -7,7 +7,7 @@ console.log('What is the result of the expression?');
 let num = [];
 for (let i = 0; i < 3; i++)
 {   let firstnum = Math.round(Math.random()*100); 
-    let secondnum = Math.round(Math.random()*100)
+    let secondnum = Math.round(Math.random()*100);
     let operation;
     let operationDecide = Math.random();
     if (operationDecide < 0.34)
