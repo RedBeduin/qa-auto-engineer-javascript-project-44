@@ -9,9 +9,7 @@ const engine = (gameFunc, question) => {
   const numberArray = [];
   for (let i = 0; i < 3; i += 1) {
     numberArray[i] = randomNumberGeneratorX10();
-    let functionValue = null;
-    let functionTask = null;
-    [functionValue, functionTask] = gameFunc(numberArray[i]);
+    const [functionValue, functionTask] = gameFunc(numberArray[i]);
     console.log(`Question: ${functionTask}`);
 
     const answer = readlineSync.question('Your answer: ');
