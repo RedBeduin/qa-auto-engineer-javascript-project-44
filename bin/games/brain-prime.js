@@ -1,30 +1,25 @@
-import readlineSync from 'readline-sync';
-import {engine} from '../engine.js';
+import engine from '../../src/engine.js';
 
-let brainPrimeQuestion = 'Answer "yes" if the number is prime, otherwise answer "no".';
+const brainPrimeQuestion = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
-const isPrime = (num) => {  
-  if (num < 2)
-  {
-    return ['no', num];
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
   }
-  
-  if(num === 2) 
-  {
-    return ['yes', num];
-  }   
-  
-  for(let i = 2; i < num; i++)  
-  {
-    if (num % i === 0)
-    {
-      return ['no', num];   
-    } 
-  } 
-  
-  return ['yes', num];
-} 
- 
 
+  if (num === 2) {
+    return true;
+  }
 
-engine(isPrime, brainPrimeQuestion);
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const sayPrimeOrNot = (num) => ((isPrime(num)) ? ['yes', num] : ['no', num]);
+
+engine(sayPrimeOrNot, brainPrimeQuestion);

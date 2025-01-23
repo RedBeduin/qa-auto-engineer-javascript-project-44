@@ -1,29 +1,23 @@
-import readlineSync from 'readline-sync';
-import {engine} from '../engine.js'
+import engine from '../../src/engine.js';
+import { randomNumberGenerator } from '../../src/utils.js';
 
-let brainCalcQuestion = 'What is the result of the expression?'; 
+const brainCalcQuestion = 'What is the result of the expression?';
 
-const calc = (num) => {
+const calc = () => {
   const operations = ['+', '-', '*'];
   const operation = operations[Math.floor(Math.random() * operations.length)];
- 
-  let firstnum = Math.round(Math.random());
-  let secondnum = Math.round(Math.random());
-  let resultOfOperation;    
-  if (operation === '+')
-  { 
+  const firstnum = randomNumberGenerator();
+  const secondnum = randomNumberGenerator();
+  let resultOfOperation;
+  if (operation === '+') {
     resultOfOperation = firstnum + secondnum;
-  }
-  else if (operation === '*')
-  { 
+  } else if (operation === '*') {
     resultOfOperation = firstnum * secondnum;
-  }
-  else
-  { 
+  } else {
     resultOfOperation = firstnum - secondnum;
   }
 
-  let brainCalcTask = `${firstnum} ${operation} ${secondnum}`;
+  const brainCalcTask = `${firstnum} ${operation} ${secondnum}`;
 
   return [resultOfOperation, brainCalcTask];
 };

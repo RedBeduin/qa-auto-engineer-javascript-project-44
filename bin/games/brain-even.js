@@ -1,17 +1,15 @@
-import readlineSync from 'readline-sync';
-import {engine} from '../engine.js';
+import engine from '../../src/engine.js';
 
-let brainEvenQuestion = 'Answer "yes" if the number is even, otherwise answer "no".'; 
+const brainEvenQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => {
-  if(num % 2 === 0)
-  {
-    return ['yes', num];
+  if (num % 2 === 0) {
+    return true;
   }
-  else
-  {
-    return ['no', num];
-  }
+
+  return false;
 };
- 
-engine(isEven, brainEvenQuestion);
+
+const sayEvenOrNot = (num) => ((isEven(num)) ? ['yes', num] : ['no', num]);
+
+engine(sayEvenOrNot, brainEvenQuestion);

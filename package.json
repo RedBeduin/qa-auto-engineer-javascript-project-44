@@ -13,6 +13,7 @@
     "brain-prime": "bin/games/brain-prime.js"
   },
   "scripts": {
+    "lint": "eslint {bin,src}/*.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
