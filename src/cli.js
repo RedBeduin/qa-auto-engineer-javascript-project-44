@@ -7,4 +7,4 @@ const greetandask = () => {
   console.log(`Hello, ${UserName}!`);
 };
 
-export { greetandask };
+export default greetandask;
