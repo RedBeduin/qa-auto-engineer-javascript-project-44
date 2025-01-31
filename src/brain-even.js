@@ -1,4 +1,4 @@
-export const brainEvenQuestion = 'Answer "yes" if the number is odd, otherwise answer "no".';
+export const brainEvenQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
