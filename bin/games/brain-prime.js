@@ -1,3 +1,4 @@
+#!/usr/bin/games/env node
 import engine from '../../src/engine.js';
 import { sayPrimeOrNot, brainPrimeQuestion } from '../../src/brain-prime.js';
 
