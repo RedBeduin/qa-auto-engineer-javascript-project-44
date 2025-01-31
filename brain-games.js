@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/env node
 
-const greetFunc = () => {console.log("Welcome to the Brain Games!")};
+const greetFunc = () => { console.log('Welcome to the Brain Games!'); };
 greetFunc();
