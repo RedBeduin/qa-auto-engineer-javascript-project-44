@@ -16,7 +16,7 @@ const engine = (gameFunc, question) => {
     if (answer === `${functionValue}`) {
       console.log('Correct!');
       if (i === 2) {
-        console.log(`Congratulation, ${UserName}!`);
+        console.log(`Congratulations, ${UserName}!`);
       }
     } else {
       console.log(`'${answer}' is wrong answer ;(.Correct answer was '${functionValue}'.\nLet's try again, ${UserName}!`);
