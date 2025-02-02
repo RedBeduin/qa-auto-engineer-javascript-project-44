@@ -3,7 +3,7 @@
 
 <a href="https://codeclimate.com/github/RedBeduin/qa-auto-engineer-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/5bc29b26065dd7298b35/maintainability" /></a> 
 
-https://asciinema.org/a/693939
+https://asciinema.org/a/701142
 
 https://asciinema.org/a/694758
 
