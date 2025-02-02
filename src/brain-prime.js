@@ -1,4 +1,4 @@
-export const brainPrimeQuestion = 'Answer "yes" if the number is prime, otherwise answer "no".';
+export const brainPrimeQuestion = 'Answer "yes" if given number is prime, otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {
