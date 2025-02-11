@@ -15,5 +15,5 @@ https://asciinema.org/a/695308
 
 ### INSTRUCTION
 ### 1. Move to /bin directory.
-### 2. Type "node brain-<name of the game you want to launch>".
+### 2. Type "node brain-[name of the game you want to launch]".
 ### 3. Follow the instructions on the screen.

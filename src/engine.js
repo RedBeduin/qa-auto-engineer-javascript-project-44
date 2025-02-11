@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randomNumberGeneratorX10 } from './utils.js';
+import randomInt from './utils.js';
 
 const engine = (gameFunc, question) => {
   console.log('Welcome to the Brain Games!');
@@ -8,7 +8,7 @@ const engine = (gameFunc, question) => {
   console.log(question);
   const numberArray = [];
   for (let i = 0; i < 3; i += 1) {
-    numberArray[i] = randomNumberGeneratorX10();
+    numberArray[i] = randomInt(1, 999);
     const [functionValue, functionTask] = gameFunc(numberArray[i]);
     console.log(`Question: ${functionTask}`);
 

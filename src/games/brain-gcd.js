@@ -1,16 +1,8 @@
-import { randomNumberGeneratorX10 } from './utils.js';
+import randomInt from '../utils.js';
 
 export const braingcdQuestion = 'Find the greatest common divisor of given numbers.';
 
-const gcd = () => {
-  let firstnum = randomNumberGeneratorX10();
-  while (firstnum === 0) {
-    firstnum = randomNumberGeneratorX10();
-  }
-  let secondnum = randomNumberGeneratorX10();
-  while (secondnum === 0) {
-    secondnum = randomNumberGeneratorX10();
-  }
+const euclidAlgorithm = (firstnum, secondnum) => {
   let divided;
   let divider;
   divided = (firstnum > secondnum) ? firstnum : secondnum;
@@ -20,8 +12,15 @@ const gcd = () => {
     divided = divider;
     divider = rest;
   }
+  return divider;
+};
+
+const gcd = () => {
+  const firstnum = randomInt(1, 999);
+  const secondnum = randomInt(1, 999);
+
   const braingcdTask = `${firstnum} ${secondnum}`;
-  return [divider, braingcdTask];
+  return [euclidAlgorithm(firstnum, secondnum), braingcdTask];
 };
 
 export { gcd };

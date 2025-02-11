@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import engine from '../src/engine.js';
-import { hiddenNum, brainProgressionQuestion } from '../src/brain-progression.js';
+import { progression, brainProgressionQuestion } from '../src/games/brain-progression.js';
 
-engine(hiddenNum, brainProgressionQuestion);
+engine(progression, brainProgressionQuestion);
