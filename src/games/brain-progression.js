@@ -4,7 +4,8 @@ export const brainProgressionQuestion = 'What number is missing in the progressi
 
 const hiddenNum = (indexOfHiddenEl, packToConvert) => {
   const questionPack = [];
-  for (let pos = 0; pos < 11; pos += 1) {
+  const numOfDigitsInProgression = 10;
+  for (let pos = 0; pos <= numOfDigitsInProgression; pos += 1) {
     if (pos === indexOfHiddenEl) {
       questionPack[pos] = '..';
     } else {
@@ -18,7 +19,8 @@ const progression = () => {
   const pack = [];
   pack[0] = randomInt(1, 999);
   const increase = randomInt(1, 999);
-  for (let pos = 1; pos < 11; pos += 1) {
+  const numOfDigitsInProgression = 10;
+  for (let pos = 1; pos <= numOfDigitsInProgression; pos += 1) {
     pack[pos] = pack[pos - 1] + increase;
   }
   const indexOfHiddenElement = randomInt(0, 9);

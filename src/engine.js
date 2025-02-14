@@ -23,7 +23,6 @@ const engine = (gameFunc, question) => {
       return Error('Wrong answer');
     }
   }
-  return 'Congratulations!';
 };
 
 export default engine;
