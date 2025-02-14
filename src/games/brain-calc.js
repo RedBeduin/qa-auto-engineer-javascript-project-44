@@ -11,7 +11,7 @@ const calculator = (firstnum, secondnum, operation) => {
     case '*':
       return firstnum * secondnum;
     default:
-      return 'Incorrect operation';
+      return Error;
   }
 };
 

@@ -7,7 +7,8 @@ const engine = (gameFunc, question) => {
   console.log(`Hello, ${UserName}!`);
   console.log(question);
   const numberArray = [];
-  for (let i = 0; i < 3; i += 1) {
+  const numOfRounds = 3;
+  for (let i = 0; i < numOfRounds; i += 1) {
     numberArray[i] = randomInt(1, 999);
     const [functionValue, functionTask] = gameFunc(numberArray[i]);
     console.log(`Question: ${functionTask}`);
@@ -15,14 +16,13 @@ const engine = (gameFunc, question) => {
     const answer = readlineSync.question('Your answer: ');
     if (answer === `${functionValue}`) {
       console.log('Correct!');
-      if (i === 2) {
-        console.log(`Congratulations, ${UserName}!`);
-      }
     } else {
       console.log(`'${answer}' is wrong answer ;(.Correct answer was '${functionValue}'.\nLet's try again, ${UserName}!`);
       return Error('Wrong answer');
     }
   }
+  console.log(`Congratulations, ${UserName}!`);
+  return 0;
 };
 
 export default engine;
